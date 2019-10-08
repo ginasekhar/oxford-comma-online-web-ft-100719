@@ -3,15 +3,18 @@ require 'pry'
 def oxford_comma(array)
  new_str = ""
  num_elements = array.size 
- if num_elements == 1 
+ case num_elements 
+  
+  when 1 
    new_str = array[0]
-   #binding.pry
-   return new_str
- end
+  when 2 
+    new_str = "#{array[0]} and #{array[1]}"
+  else
+    last_element = array.pop
+    new_str = array.join(", ")
+    new_str << " and #{last_element}"
+  end
  
- last_element = array.pop
- new_str = array.join(", ")
- new_str << " and #{last_element}"
- 
- return new_str
+  return new_str
+
 end
