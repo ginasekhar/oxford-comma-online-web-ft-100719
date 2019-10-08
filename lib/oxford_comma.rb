@@ -5,7 +5,7 @@ def oxford_comma(array)
  num_elements = array.size 
  if num_elements == 1 
    new_str = array[0]
-   binding.pry
+   #binding.pry
    return new_str
  end
  
