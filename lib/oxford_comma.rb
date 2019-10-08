@@ -9,11 +9,9 @@ def oxford_comma(array)
    return new_str
  end
  
- last_element = array[-1]
- last_element
- new_str = (array.pop).join(", ")
- binding.pry
- new_str = new_str + "and #{last_element}"
- binding.pry
+ last_element = array.pop
+ new_str = array.join(", ")
+ new_str << "and #{last_element}"
+ 
  return new_str
 end
